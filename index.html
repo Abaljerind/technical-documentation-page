@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav id="navbar">
+      <header>Git and Version Control Basics</header>
+      <ul>
+        <li><a href="#what_is_git_and_why_use_it" class="nav-link">Introduction to Git</a></li>
+        <li><a href="#setting_up_a_repository" class="nav-link">Setting Up Repositories</a></li>
+        <li><a href="#adding_committing_and_pushing" class="nav-link">Basic Git Commands</a></li>
+        <li><a href="#branching_and_merging" class="nav-link">Branching & Merging</a></li>
+        <li><a href="#pull_requests_and_collaboration" class="nav-link">Collaboration with Git</a></li>
+      </ul>
+    </nav>
+    <!-- end nav -->
+
+    <!-- main -->
+    <main id="main-doc">
+      <section id="#what_is_git_and_why_use_it" class="main-section">
+        <header>Introduction to Git</header>
+        <article>
+          <p>
+            Git’s distributed nature means that every developer working on a project has a complete copy of the
+            repository, including the full history of changes. This ensures that even if the central server is down,
+            developers can still commit and save their work locally. Unlike centralized systems, Git provides unmatched
+            reliability and performance for modern software development.
+          </p>
+          <p>
+            Additionally, Git allows developers to experiment with confidence. By creating branches, developers can test
+            new features or fix bugs without interfering with the main project. When the changes are complete and
+            verified, they can be seamlessly merged back into the main branch, preserving a clean project history.
+          </p>
+          <p>Key Benefits of Git:</p>
+          <ul>
+            <li>Enables collaborative coding by managing multiple contributors.</li>
+            <li>Tracks every change, making it easier to revert or inspect code modifications.</li>
+            <li>Provides powerful branching and merging features for parallel development.</li>
+            <li>Works offline, meaning you can manage your local repository without internet access.</li>
+          </ul>
+
+          <p>Common Use Cases:</p>
+          <ol>
+            <li>Keeping a history of code changes.</li>
+            <li>Collaborating with a team on the same project.</li>
+            <li>Ensuring code stability by isolating new features on separate branches.</li>
+          </ol>
+        </article>
+      </section>
+      <section id="#setting_up_a_repository" class="main-section">
+        <header>Setting Up a Repository</header>
+        <article>
+          <p>
+            Setting up a repository marks the first step in establishing version control for your project. By
+            initializing a repository with <code>git init</code>, Git starts tracking the project, creating a
+            <code>.git</code> folder that contains the entire history of the project and its configurations. Linking
+            this local repository to a remote one ensures that your work is backed up and accessible to collaborators.
+          </p>
+          <p>
+            In addition to creating a repository, you can configure basic settings like the user name and email, which
+            are associated with your commits. This information is crucial for collaboration, as it identifies the
+            contributor of each change. To make sure your work is in sync with others, regularly pull updates from the
+            remote repository.
+          </p>
+
+          <p>Steps to Set Up a Repository:</p>
+          <ol>
+            <li>Install Git on your machine.</li>
+            <li>Navigate to the project folder in your terminal.</li>
+            <li>Run the command git init to initialize the repository.</li>
+          </ol>
+
+          <p>
+            Once initialized, you can begin tracking your project files. If you’re using a remote service like GitHub,
+            you can link the repository to push your changes to the cloud. Sample Commands:
+
+            <code>
+              <br />
+              git init <br />
+              git remote add origin https://github.com/user/repo.git <br />
+              git pull origin main
+            </code>
+          </p>
+        </article>
+      </section>
+      <section id="#adding_committing_and_pushing" class="main-section">
+        <header>Adding, Committing, and Pushing</header>
+
+        <article>
+          <p>
+            The process of staging changes allows developers to carefully review what will be included in a commit. This
+            step prevents unnecessary files or mistakes from being added to the project history. Git’s ability to commit
+            only staged changes ensures that developers maintain a clean and meaningful history.
+          </p>
+          <p>
+            Pushing commits to a remote repository is crucial for collaboration. It allows others to access your changes
+            and ensures that your progress is safely backed up. By regularly adding, committing, and pushing changes,
+            developers can work efficiently, knowing their contributions are documented and shared.
+          </p>
+
+          <p>Git operates on a three-step process for managing changes: staging, committing, and pushing.</p>
+          <ol>
+            <li>Staging: Files must be added to the staging area using <code>git add</code>.</li>
+            <li>Committing: Record the changes in the repository using <code>git commit</code>.</li>
+            <li>Pushing: Upload the changes to a remote repository using <code>git push</code>.</li>
+          </ol>
+
+          <p>
+            Sample Commands:
+            <br />
+            <code>
+              git add file.txt <br />
+              git commit -m "Add file.txt" <br />
+              git push origin main
+            </code>
+          </p>
+        </article>
+      </section>
+      <section id="#branching_and_merging" class="main-section">
+        <header>Branching and Merging</header>
+
+        <article>
+          <p>
+            Branching empowers teams to work on multiple features or fixes simultaneously without conflict. For example,
+            while one developer is working on a new feature, another can fix a bug in the <code>main</code> branch. Git
+            makes it easy to manage these parallel developments and integrate them once complete.
+          </p>
+
+          <p>
+            Merging, however, can sometimes lead to conflicts when changes overlap. Git provides powerful tools to
+            resolve these conflicts, ensuring that the final code integrates smoothly. By practicing good branch
+            management, such as naming conventions and frequent updates from the main branch, teams can minimize
+            potential issues.
+          </p>
+
+          <p>Key Concepts:</p>
+          <ul>
+            <li>A branch is a pointer to a specific commit.</li>
+            <li>The <code>main</code> branch is the default branch in most projects.</li>
+          </ul>
+
+          <p>Steps to Create and Merge a Branch:</p>
+          <ol>
+            <li>Create a branch using <code>git branch feature-name</code>.</li>
+            <li>
+              Switch to the branch with <code>git checkout feature-name</code> or <code>git switch feature-name</code>.
+            </li>
+            <li>Merge it back to <code>main</code> with <code>git merge feature-name</code>.</li>
+          </ol>
+
+          <p>
+            Sample Commands:
+            <code>
+              <br />
+              git branch feature <br />
+              git checkout feature <br />
+              git merge feature
+            </code>
+          </p>
+        </article>
+      </section>
+      <section id="#pull_requests_and_collaboration" class="main-section">
+        <header>Pull Requests and Collaboration</header>
+
+        <article>
+          <p>
+            Pull requests facilitate a structured review process where contributors can propose changes, and
+            collaborators can provide feedback. This process ensures that every change meets the project’s standards and
+            fits seamlessly into the existing codebase. Tools like GitHub make this process even more efficient with
+            inline comments and automated checks.
+          </p>
+
+          <p>
+            Collaboration in Git encourages transparency and accountability. Each commit is tied to a specific
+            contributor, making it easy to identify who made changes and why. With a clear history of modifications,
+            team members can build trust and improve the quality of their projects.
+          </p>
+
+          <p>Steps in the Pull Request Process:</p>
+          <ol>
+            <li>Push your changes to a feature branch in the remote repository.</li>
+            <li>Open a pull request on the GitHub repository.</li>
+            <li>Reviewers comment on your code and suggest changes.</li>
+            <li>Once approved, merge the pull request into the main branch.</li>
+          </ol>
+
+          <p>Collaboration Tips:</p>
+          <ul>
+            <li>Regularly pull changes from the main branch to stay up-to-date.</li>
+            <li>Use descriptive commit messages to explain your changes.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <!-- end main -->
+  </body>
+</html>
