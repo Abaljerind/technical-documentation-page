@@ -65,3 +65,36 @@ body {
   color: whitesmoke;
   text-decoration: none;
 }
+
+/* main */
+#main-doc {
+  width: 75%;
+  position: absolute;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+#main-doc section {
+  font-size: 16px;
+}
+
+#main-doc section header {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#main-doc section article {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#main-doc section article ul li,
+#main-doc section article ol li {
+  margin-left: 28px;
+  padding-left: 8px;
+}
