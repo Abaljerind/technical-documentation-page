@@ -59,9 +59,10 @@
         <article>
           <p>
             Setting up a repository marks the first step in establishing version control for your project. By
-            initializing a repository with <code>git init</code>, Git starts tracking the project, creating a
-            <code>.git</code> folder that contains the entire history of the project and its configurations. Linking
-            this local repository to a remote one ensures that your work is backed up and accessible to collaborators.
+            initializing a repository with <code class="text_code">git init</code>, Git starts tracking the project,
+            creating a <code class="text_code">.git</code> folder that contains the entire history of the project and
+            its configurations. Linking this local repository to a remote one ensures that your work is backed up and
+            accessible to collaborators.
           </p>
           <p>
             In addition to creating a repository, you can configure basic settings like the user name and email, which
@@ -109,15 +110,15 @@
 
           <p>Git operates on a three-step process for managing changes: staging, committing, and pushing.</p>
           <ol>
-            <li>Staging: Files must be added to the staging area using <code>git add</code>.</li>
-            <li>Committing: Record the changes in the repository using <code>git commit</code>.</li>
-            <li>Pushing: Upload the changes to a remote repository using <code>git push</code>.</li>
+            <li>Staging: Files must be added to the staging area using <code class="text_code">git add</code>.</li>
+            <li>Committing: Record the changes in the repository using <code class="text_code">git commit</code>.</li>
+            <li>Pushing: Upload the changes to a remote repository using <code class="text_code">git push</code>.</li>
           </ol>
 
           <p>
             Sample Commands:
             <br />
-            <code>
+            <code class="codebase">
               git add file.txt <br />
               git commit -m "Add file.txt" <br />
               git push origin main
@@ -133,8 +134,9 @@
         <article>
           <p>
             Branching empowers teams to work on multiple features or fixes simultaneously without conflict. For example,
-            while one developer is working on a new feature, another can fix a bug in the <code>main</code> branch. Git
-            makes it easy to manage these parallel developments and integrate them once complete.
+            while one developer is working on a new feature, another can fix a bug in the
+            <code class="text_code">main</code> branch. Git makes it easy to manage these parallel developments and
+            integrate them once complete.
           </p>
 
           <p>
@@ -147,22 +149,26 @@
           <p>Key Concepts:</p>
           <ul>
             <li>A branch is a pointer to a specific commit.</li>
-            <li>The <code>main</code> branch is the default branch in most projects.</li>
+            <li>The <code class="text_code">main</code> branch is the default branch in most projects.</li>
           </ul>
 
           <p>Steps to Create and Merge a Branch:</p>
           <ol>
-            <li>Create a branch using <code>git branch feature-name</code>.</li>
+            <li>Create a branch using <code class="text_code">git branch feature-name</code>.</li>
             <li>
-              Switch to the branch with <code>git checkout feature-name</code> or <code>git switch feature-name</code>.
+              Switch to the branch with <code class="text_code">git checkout feature-name</code> or
+              <code class="text_code">git switch feature-name</code>.
             </li>
-            <li>Merge it back to <code>main</code> with <code>git merge feature-name</code>.</li>
+            <li>
+              Merge it back to <code class="text_code">main</code> with
+              <code class="text_code">git merge feature-name</code>.
+            </li>
           </ol>
 
           <p>
             Sample Commands:
-            <code>
-              <br />
+            <br />
+            <code class="codebase">
               git branch feature <br />
               git checkout feature <br />
               git merge feature
